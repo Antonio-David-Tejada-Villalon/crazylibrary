@@ -62,7 +62,7 @@ const updateMagazine = async (req, res) => {
       const response = await mongodb
         .getDb()
         .db('crazylibrary')
-        .collection('magazine')
+        .collection('magazines')
         .replaceOne({ _id: magazineId }, magazine);
       console.log(response);
       if (response.modifiedCount > 0) {
@@ -81,7 +81,7 @@ const updateMagazine = async (req, res) => {
         res.status(400).json('Invalid magazine id.');
       }
       const magazineId = new ObjectId(req.params.id);
-      const response = await mongodb.getDb().db('crazylibrary').collection('magazine').remove({ _id: magazineId }, true);
+      const response = await mongodb.getDb().db('crazylibrary').collection('magazines').remove({ _id: magazineId }, true);
       console.log(response);
       if (response.deletedCount > 0) {
         res.status(204).send();

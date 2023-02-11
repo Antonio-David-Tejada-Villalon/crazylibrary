@@ -5,10 +5,10 @@
     "description": "Books, Magazines and Dictionaries",
     "version": "1.0.0"
   },
-  "host": "antonio-david-tejada-villalon-l09-13.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/books/": {

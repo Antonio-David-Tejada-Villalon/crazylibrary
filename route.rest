@@ -71,3 +71,17 @@ Content-Type: application/json
 ### Delete book
 DELETE https://antonio-david-tejada-villalon-l05.onrender.com/books/63ce21ece7db94acf698ff10 HTTP/1.1
 
+### Creating a new book
+POST https://antonio-david-tejada-villalon-l09-13.onrender.com/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"Richard III",
+    "author":"William Shakespeare",
+    "edition":"4th edition",
+    "year": 1597,
+    "country":"Old England",
+    "price": 50,
+    "portrait":"sdfgsdgs",
+    "score": 4
+}

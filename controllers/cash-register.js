@@ -18,7 +18,7 @@ const allCashRegister = async (req, res, next) => {
     }
     
   }else{
-    res.status(200).json("Sorry, the Cash Register Information is just for Admin User.");
+    res.status(400).json("Sorry, the Cash Register Information is just for Admin User.");
   }
    
 };

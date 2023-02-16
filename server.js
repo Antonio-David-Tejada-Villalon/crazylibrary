@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/profile', requiresAuth(), (req, res) => {
+    //console.log(req.oidc);
     res.send(JSON.stringify(req.oidc.user));
 });
 const port = process.env.PORT || 3000;
@@ -43,4 +44,6 @@ mongodb.initDb((err) => {
       console.log(`this is running on port ${port}`);
   }
 });
+
+module.exports = app;
 
